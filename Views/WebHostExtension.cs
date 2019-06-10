@@ -16,13 +16,13 @@ public static class WebHostExtension
             var services = scope.ServiceProvider;
             var context = services.GetRequiredService<Context>();
             
-            AddTestData(context);
+            AddData(context);
         }
 
         return webHost;
     }
 
-    private static void AddTestData(Context context)
+    private static void AddData(Context context)
     {
         var customers = new List<Customer>
         {
